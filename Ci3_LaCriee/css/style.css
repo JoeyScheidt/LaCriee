@@ -1,0 +1,666 @@
+/*Code CSS du site des "Criées de Cornouaille" contexte d'un des 2 projets de 2ème année de BTS SIO : SLAM
+
+
+/*__________MODIFICATIONS GLOBALES__________*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Manrope', sans-serif;
+}
+
+body {
+	background: #fff;
+	padding-bottom: 50px;
+}
+
+textarea {
+	resize: none;
+}
+
+.list-unstyled {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.d-flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.warning {
+	color: red;
+	padding: 10px;
+}
+
+.ENC {
+	color: green;
+}
+
+.ATT {
+	color: gray;
+}
+
+.VEN {
+	color: red;
+}
+
+.liendiv {
+	text-decoration: none;
+	color: black;
+}
+
+.liendiv div.produit {
+	transition: all 0.15s ease;
+}
+
+.liendiv div.produit:hover {
+	background: #c8c8c8;
+}
+
+.liendiv div.article {
+	transition: all 0.15s ease;
+}
+
+.liendiv div.article:hover {
+	background: #c8c8c8;
+}
+
+.informationPage {
+	padding: 20px;
+}
+
+.informationPage h4 {
+	padding-bottom: 10px;
+}
+
+
+/*__________BARRE DE NAVIGATION__________*/
+
+.header {
+	background: #1B3280;
+	position: sticky;
+	top: 0;
+	z-index: 3;
+	box-shadow: 0px 2px 10px #00000040;
+}
+
+.header .container {
+	width: 100%;
+}
+
+.header li {
+	display: inline-flex;
+	align-items: center;
+	padding: 0 .6rem;
+}
+
+.header a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 16px;
+	transition: all 0.3s ease;
+}
+
+.header a:hover {
+	color: #8ba6ff;
+}
+
+.header .logo {
+	width: 100px;
+	height: 100px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.navbar {
+	display: flex;
+	margin-right: 23px;
+}
+
+.header .right ul {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+}
+
+
+/*__________PAGE D'ACCUEIL__________*/
+
+.banniere .fond {
+	display: flex;
+	z-index: 1;
+}
+
+.banniere .fond img {
+	width: 100%;
+	box-shadow: 0px 2px 8px #00000021;
+}
+
+.banniere .presentation {
+	position: absolute;
+	text-align: center;
+	z-index: 2;
+	width: 650px;
+	left: 50%;
+	top: 180px;
+	padding: 20px;
+	padding-bottom: 30px;
+	transform: translate(-50%);
+	background-color: #0000008e;
+}
+
+.presentation h1,
+.presentation p {
+	color: #fff;
+}
+
+.presentation h1 {
+	font-size: 40px;
+	margin: 20px;
+}
+
+.presentation p {
+	margin: 10px;
+}
+
+.main {
+	margin: 100px;
+}
+
+.main .title {
+	display: flex;
+	align-items: center;
+	margin-left: 50px;
+	margin-bottom: 30px;
+}
+
+.main .title h2 {
+	font-size: 30px;
+}
+
+.main .title a {
+	color: #1B3280;
+	text-decoration: none;
+	padding-top: 5px;
+	margin-left: 50px;
+	font-weight: 500;
+}
+
+.main .title a:hover {
+	text-decoration: underline;
+	text-underline-offset: 5px;
+}
+
+.encheresEC,
+.produitsDispo {
+	margin-bottom: 100px;
+}
+
+.articles {
+	width: 80%;
+}
+
+.article {
+	height: 250px;
+	width: 250px;
+	margin-right: 20px;
+	background: #e0e0e0;
+}
+
+.article img {
+	height: 230px;
+	width: 230px;
+	margin: 10px;
+}
+
+
+/*__________PAGE PRODUITS / ENCHERES-EC__________*/
+
+.hide {
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+	height: 40px;
+	background-color: #fff;
+}
+
+.boutique {
+	display: flex;
+	margin-top: 40px;
+}
+
+.espace-trier {
+	margin-left: 40px;
+	margin-right: 40px;
+	width: 20%;
+	height: 500px;
+}
+
+.trier {
+	position: fixed;
+	z-index: 1;
+	margin-left: 40px;
+	margin-right: 20px;
+	width: 20%;
+	height: 180px;
+	background: #e0e0e0;
+}
+
+.trierpar {
+	margin-left: 10px;
+}
+
+.filtres {
+	margin-left: 10px;
+}
+
+.produits {
+	width: 80%;
+	margin-left: 25px;
+	margin-right: 50px;
+}
+
+.produits .produit {
+	background: #e0e0e0;
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.produit img {
+	width: 160px;
+	height: 160px;
+	margin: 10px;
+}
+
+.produit .produit-infos {
+	display: flex;
+	width: 100%;
+	margin: 10px;
+}
+
+.infos-droite {
+	width: 100%;
+	margin: 20px;
+	text-align: right;
+	font-size: 20px;
+}
+
+.infos-gauche {
+	width: 80%;
+	text-align: left;
+}
+
+.infos-gauche h3,
+.infos-gauche h4 {
+	margin-top: 0;
+	margin-bottom: 0px;
+}
+
+.infos-gauche h3 {
+	font-size: 22px;
+}
+
+.infos-gauche .details {
+	margin-top: 30px;
+	font-size: 17px;
+}
+
+
+/*___________PAGE ACHAT___________*/
+
+.achat {
+	margin-top: 60px;
+	margin-right: 150px;
+	margin-left: 150px;
+}
+
+.lot {
+	display: flex;
+	background: #e0e0e0;
+	padding: 10px;
+}
+
+.lot h1 {
+	margin-bottom: 10px;
+}
+
+.imageLot {
+	min-width: 251px;
+	min-height: 251px;
+	max-height: 295px;
+	width: 25%;
+}
+
+.descriptionLot {
+	margin-left: 20px;
+}
+
+.details .detailshaut,
+.details .detailsmid {
+	margin-bottom: 10px;
+}
+
+.encheres {
+	display: flex;
+}
+
+.panneauPrix {
+	background: #e0e0e0;
+	padding: 40px;
+	width: 300px;
+	margin-top: 50px;
+	margin-right: 30px;
+}
+
+.panneauPrix h1,
+.panneauPrix h2 {
+	padding-left: 10px;
+}
+
+.panneauEnchere {
+	display: flex;
+	background: #e0e0e0;
+	width: 73%;
+	padding: 40px;
+	margin-top: 50px;
+}
+
+.panneauEnchere .enchereDroite {
+	display: flex;
+	padding-left: 60px;
+}
+
+.formEnchere input {
+	display: block;
+	padding: 8px;
+	margin-bottom: 10px;
+}
+
+.formEnchere button {
+	font-weight: 500;
+	font-size: 15px;
+	padding: 5px 12px 5px 12px;
+}
+
+.enchereDroite h4 {
+	color: #1B3280;
+	width: 300px;
+	padding-left: 60px;
+	padding-right: 10px;
+}
+
+
+/*__________PAGE CONTACT__________*/
+
+.contact {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.formContact {
+	max-width: 600px;
+	margin: 2rem auto 0 auto;
+}
+
+.formContact label {
+	font-weight: 400;
+}
+
+.formContact input,
+.formContact textarea {
+	display: block;
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 10px;
+}
+
+.formContact textarea {
+	min-height: 200px;
+}
+
+.formContact .Envoyer {
+	font-weight: 500;
+	font-size: 15px;
+	padding: 12px;
+}
+
+
+/*________MENTIONS LEGALES________*/
+
+.mentionsLeg {
+	margin: 50px;
+}
+
+.mentionsLeg h3 {
+	padding-left: 20px;
+	margin-top: 20px;
+}
+
+.mentionsLeg p {
+	padding-left: 40px;
+	padding-top: 5px;
+	width: 75%;
+}
+
+
+/*__________PAGE ACCOUNT__________*/
+
+.account {
+	padding-top: 50px;
+	margin-left: 10%;
+	margin-bottom: 40px;
+}
+
+.colonne {
+	padding: 50px;
+}
+
+.infosGauche {
+	padding: 5px;
+	margin: 20px 0px 0px 15%;
+	font-size: 18px;
+	float: left;
+	width: 25%;
+}
+
+.infosDroite {
+	padding: 5px;
+	margin: 20px 40% 0px 0px;
+	font-size: 18px;
+	float: right;
+	width: 20%;
+}
+
+.infosGauche p,
+.infosDroite p {
+	padding-bottom: 8px;
+}
+
+.logout-button {
+	font-weight: 500;
+	font-size: 15px;
+	margin-top: 50px;
+	padding: 8px 20px 10px 20px;
+}
+
+
+/*__________INCRIPTION__________*/
+
+.inscription {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.formInsc {
+	max-width: 550px;
+	margin: 2rem auto 0 auto;
+}
+
+.formInsc label {
+	font-weight: 400;
+}
+
+.formInsc input,
+.formInsc textarea {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.formInsc red {
+	color: red;
+}
+
+.formInsc gray {
+	color: #646464;
+}
+
+/*__________CONNEXION__________*/
+
+.connexion {
+	margin-top: 80px;
+	text-align: center;
+}
+
+.formConnexion {
+	max-width: 250px;
+	margin: 2rem auto 0 auto;
+}
+
+.formConnexion input,
+.formConnexion textarea {
+	display: block;
+	width: 100%;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+.formConnexion .BtnConnexion {
+	font-weight: 500;
+	font-size: 15px;
+	margin-top: 20px;
+	padding: 8px 20px 10px 20px;
+}
+
+.sinscrire {
+	margin-top: 30px;
+}
+
+
+/*__________CONTEXTE__________*/
+
+.contexte {
+	margin-top: 50px;
+	text-align: center;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+.contexte p {
+	padding: 20px;
+}
+
+.documents {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+}
+
+/*__________FOOTER__________*/
+
+.footer {
+	position: absolute;
+	display: flex;
+	width: 100%;
+	z-index: 3;
+	background: #1B3280;
+	margin-top: 150px;
+	height: 270px;
+	box-shadow: 0px -3px 8px #00000045;
+}
+
+.footer a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 16px;
+	transition: all 0.3s ease;
+	text-decoration: underline #ffffff80;
+	text-underline-offset: 6px;
+}
+
+.footer a:hover {
+	color: #8ba6ff;
+}
+
+.footer li {
+	padding-bottom: 12px;
+}
+
+.containerFooter {
+	width: 100%;
+	display: inline-flex;
+	justify-content: space-between;
+}
+
+.elementsLeft {
+	margin-top: 50px;
+	margin-left: 100px;
+	margin-right: 50px;
+}
+
+.elementsMid {
+	margin-top: 50px;
+	margin-right: 600px;
+}
+
+.elementsRight {
+	margin-top: 20px;
+	margin-right: 100px;
+	text-align: center;
+}
+
+.elementsRight .logoFooter {
+	width: 190px;
+	height: 190px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.elementsRight p {
+	color: #ffffff80;
+}
+
+/*__________ID - MODIFICATIONS PRÉCISES__________*/
+
+#btnHelp {
+	display: flex;
+	align-items: center;
+	margin-right: 50px;
+	font-size: 28px;
+	color: #fff;
+	transition: all 0.3s ease;
+}
+
+#btnAccount {
+	display: flex;
+	align-items: center;
+	margin-right: -10px;
+	font-size: 28px;
+	color: #fff;
+	transition: all 0.3s ease;
+}
+
+#btnAccount:hover {
+	color: #8ba6ff;
+}
+
+#btnHelp:hover {
+	color: #8ba6ff;
+}
